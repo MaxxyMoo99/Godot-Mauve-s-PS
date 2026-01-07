@@ -1,8 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8jcdkiofrfl3"]
+[gd_scene load_steps=2 format=3 uid="uid://c8jcdkiofrfl3"]
 
 [ext_resource type="PackedScene" uid="uid://bklxnetr0vf35" path="res://Characters/player_mauve.tscn" id="1_80nbo"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7jktm"]
 
 [node name="Game" type="Node2D"]
 
@@ -12,16 +10,10 @@ position = Vector2(48, 11)
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="PlayerMauve"]
 remote_path = NodePath("../../Camera2D")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(1, 79)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("WorldBoundaryShape2D_7jktm")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(48, 11)
 zoom = Vector2(3, 3)
 process_callback = 0
 limit_smoothed = true
 position_smoothing_enabled = true
-position_smoothing_speed = 2.0
+position_smoothing_speed = 2.5
