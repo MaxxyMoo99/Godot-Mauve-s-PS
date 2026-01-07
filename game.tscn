@@ -21,4 +21,7 @@ shape = SubResource("WorldBoundaryShape2D_7jktm")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(48, 11)
 zoom = Vector2(3, 3)
+process_callback = 0
+limit_smoothed = true
 position_smoothing_enabled = true
+position_smoothing_speed = 2.0
